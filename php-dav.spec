@@ -6,7 +6,7 @@
 Summary:	A PHP WebDAV for PHP
 Name:		php-%{modname}
 Version:	1.0
-Release:	%mkrel 1
+Release:	%mkrel 2
 Group:		Development/PHP
 License:	BSD-like
 URL:		http://php-webdav.pureftpd.org/project/php-webdav
@@ -62,5 +62,3 @@ EOF
 %dir %{_sysconfdir}/php.d/%{modname}
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/php.d/%{inifile}
 %attr(0755,root,root) %{_libdir}/php/extensions/%{soname}
-
-
