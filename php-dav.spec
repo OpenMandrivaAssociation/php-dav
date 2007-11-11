@@ -5,8 +5,8 @@
 
 Summary:	A PHP WebDAV for PHP
 Name:		php-%{modname}
-Version:	1.0
-Release:	%mkrel 5
+Version:	1.1
+Release:	%mkrel 1
 Group:		Development/PHP
 License:	BSD-like
 URL:		http://php-webdav.pureftpd.org/project/php-webdav
@@ -53,6 +53,18 @@ install -m0755 %{soname} %{buildroot}%{_libdir}/php/extensions/
 cat > %{buildroot}%{_sysconfdir}/php.d/%{inifile} << EOF
 extension = %{soname}
 EOF
+
+%post
+if [ -f /var/lock/subsys/httpd ]; then
+    %{_initrddir}/httpd restart >/dev/null || :
+fi
+
+%postun
+if [ "$1" = "0" ]; then
+    if [ -f /var/lock/subsys/httpd ]; then
+	%{_initrddir}/httpd restart >/dev/null || :
+    fi
+fi
 
 %clean
 [ "%{buildroot}" != "/" ] && rm -rf %{buildroot}
