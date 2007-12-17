@@ -14,7 +14,6 @@ Source0:	http://download.pureftpd.org/php-webdav/php-webdav-%{version}.tar.gz
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	libneon-devel
 BuildRequires:	file
-BuildRoot:	%{_tmppath}/%{name}-%{version}-buildroot
 
 %description
 The PHP WebDAV extension allows easy access to remote resources with PHP
