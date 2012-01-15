@@ -12,7 +12,7 @@ License:	BSD-like
 URL:		http://php-webdav.pureftpd.org/project/php-webdav
 Source0:	http://download.pureftpd.org/php-webdav/php-webdav-%{version}.tar.gz
 BuildRequires:	php-devel >= 3:5.2.1
-BuildRequires:	libneon-devel
+BuildRequires:	neon-devel
 BuildRequires:	file
 BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
