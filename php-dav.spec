@@ -9,7 +9,7 @@ Version:	1.2
 Release:	7
 Group:		Development/PHP
 License:	BSD-like
-URL:		http://php-webdav.pureftpd.org/project/php-webdav
+URL:		https://php-webdav.pureftpd.org/project/php-webdav
 Source0:	http://download.pureftpd.org/php-webdav/php-webdav-%{version}.tar.gz
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	neon-devel
