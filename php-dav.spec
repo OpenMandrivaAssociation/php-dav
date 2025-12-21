@@ -11,6 +11,11 @@ Group:		Development/PHP
 License:	BSD-like
 URL:		https://php-webdav.pureftpd.org/project/php-webdav
 Source0:	http://download.pureftpd.org/php-webdav/php-webdav-%{version}.tar.gz
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:	php-devel >= 3:5.2.1
 BuildRequires:	neon-devel
 BuildRequires:	file
